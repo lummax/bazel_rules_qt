@@ -3,7 +3,7 @@ package(default_visibility = ["//visibility:public"])
 cc_library(
     name = "qt_core",
     hdrs = glob(["QtCore/**"]),
-    includes = ["."],
+    includes = [".", "QtCore"],
     linkopts = [
         "-lQt5Core",
     ],
@@ -12,7 +12,7 @@ cc_library(
 cc_library(
     name = "qt_network",
     hdrs = glob(["QtNetwork/**"]),
-    includes = ["."],
+    includes = [".", "QtNetwork"],
     linkopts = [
         "-lQt5Network",
     ],
@@ -21,7 +21,7 @@ cc_library(
 cc_library(
     name = "qt_widgets",
     hdrs = glob(["QtWidgets/**"]),
-    includes = ["."],
+    includes = [".", "QtWidgets"],
     linkopts = [
         "-lQt5Widgets",
     ],
@@ -31,7 +31,7 @@ cc_library(
 cc_library(
     name = "qt_quick",
     hdrs = glob(["QtQuick/**"]),
-    includes = ["."],
+    includes = [".", "QtQuick"],
     linkopts = [
         "-lQt5Quick",
     ],
@@ -44,7 +44,7 @@ cc_library(
 cc_library(
     name = "qt_qml",
     hdrs = glob(["QtQml/**"]),
-    includes = ["."],
+    includes = [".", "QtQml"],
     linkopts = [
         "-lQt5Qml",
     ],
@@ -57,7 +57,7 @@ cc_library(
 cc_library(
     name = "qt_gui",
     hdrs = glob(["QtGui/**"]),
-    includes = ["."],
+    includes = [".", "QtGui"],
     linkopts = [
         "-lQt5Gui",
     ],
@@ -67,7 +67,7 @@ cc_library(
 cc_library(
     name = "qt_svg",
     hdrs = glob(["QtSvg/**"]),
-    includes = ["."],
+    includes = [".", "QtSvg"],
     linkopts = [
         "-lQt5Svg",
     ],
@@ -77,6 +77,6 @@ cc_library(
 cc_library(
     name = "qt_opengl",
     hdrs = glob(["QtOpenGL/**"]),
-    includes = ["."],
+    includes = [".", "QtOpenGL"],
     linkopts = ["-lQt5OpenGL"],
 )
