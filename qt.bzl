@@ -46,16 +46,12 @@ def qt_resource(name, qrc_file, deps, **kwargs):
 def qt_cc_library(name, src, hdr, normal_hdrs = [], deps = None, **kwargs):
     """Compiles a QT library and generates the MOC for it.
 
-    If a UI file is provided, then it is also compiled with UIC.
-
     Args:
       name: A name for the rule.
       src: The cpp file to compile.
       hdr: The single header file that the MOC compiles to src.
       normal_hdrs: Headers which are not sources for generated code.
       deps: cc_library dependencies for the library.
-      ui: If provided, a UI file to compile with UIC.
-      ui_deps: Dependencies for the UI file.
       kwargs: Any additional arguments are passed to the cc_library rule.
     """
     header_path = "%s/%s" % (native.package_name(), hdr) if len(native.package_name()) > 0 else hdr
