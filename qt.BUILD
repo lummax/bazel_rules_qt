@@ -65,6 +65,16 @@ cc_library(
 )
 
 cc_library(
+    name = "qt_svg",
+    hdrs = glob(["QtSvg/**"]),
+    includes = ["."],
+    linkopts = [
+        "-lQt5Svg",
+    ],
+    deps = [":qt_core"],
+)
+
+cc_library(
     name = "qt_opengl",
     hdrs = glob(["QtOpenGL/**"]),
     includes = ["."],
